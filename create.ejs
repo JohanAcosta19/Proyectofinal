@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Usuario</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Ingresa los datos del nuevo usuario</h1>
+    <form action="/create" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" name="correo" required>
+
+        <label for="numero_cuenta">Número de Cuenta:</label>
+        <input type="text" id="numero_cuenta" name="numero_cuenta" required>
+
+        <label for="escuela">Escuela:</label>
+        <select id="escuela" name="escuela" required>
+            <option value="Fes Aragón">Fes Aragón</option>
+            <option value="Fes Zaragoza">Fes Zaragoza</option>
+            <option value="Fes Iztacala">Fes Iztacala</option>
+        </select>
+
+        <button type="submit">Guardar</button>
+        <a href="/">Cancelar</a>
+    </form>
+</body>
+</html>

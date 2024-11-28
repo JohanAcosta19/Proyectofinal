@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Usuario</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Editar Usuario</h1>
+    <form action="/edit/<%= usuario.id %>" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" value="<%= usuario.nombre %>" required>
+
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" name="correo" value="<%= usuario.correo %>" required>
+
+        <label for="numero_cuenta">Número de Cuenta:</label>
+        <input type="text" id="numero_cuenta" name="numero_cuenta" value="<%= usuario.numero_cuenta %>" required>
+
+        <label for="escuela">Escuela:</label>
+        <select id="escuela" name="escuela" required>
+            <option value="Fes Aragón" <%= usuario.escuela === 'Fes Aragón' ? 'selected' : '' %>>Fes Aragón</option>
+            <option value="Fes Zaragoza" <%= usuario.escuela === 'Fes Zaragoza' ? 'selected' : '' %>>Fes Zaragoza</option>
+            <option value="Fes Iztacala" <%= usuario.escuela === 'Fes Iztacala' ? 'selected' : '' %>>Fes Iztacala</option>
+        </select>
+
+        <button type="submit">Guardar Cambios</button>
+        <a href="/">Cancelar</a>
+    </form>
+</body>
+</html>
